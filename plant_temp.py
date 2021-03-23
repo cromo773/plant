@@ -27,7 +27,7 @@ def measure_th():
     if result.is_valid():
         add_csv_data(data_file,"Temperature:", result.temperature)
     else:
-        logger.error(f'{e.__class__.__name__}: {e})')
+        logger.error(f'{e.__class__.__name__}: {e}')
 
 def measure_soil():
     if result.is_valid():
