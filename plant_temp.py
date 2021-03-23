@@ -25,7 +25,7 @@ def add_csv_data(data_file, data):
 
 def measure_th():
     if result.is_valid():
-        add_csv_data(data_file,Temperature: % result.temperature)
+        add_csv_data(data_file,"Temperature:" result.temperature)
     else:
         logger.error(f'{e.__class__.__name__}: {e})')
 
