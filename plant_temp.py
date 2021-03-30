@@ -8,7 +8,7 @@ import Adafruit_MCP3008
 
 dir_path = Path(__file__).parent.resolve()
 data_file = dir_path/'data.csv'
-logfile(dir_path/"xxx.log")
+logfile(dir_path/"loggerdata.log")
 
 x = 0
 
@@ -63,7 +63,7 @@ MOSI = 24
 CS   = 25
 mcp = Adafruit_MCP3008.MCP3008(clk=CLK, cs=CS, miso=MISO, mosi=MOSI)
 
-print('Reading MCP3008 value on channel 0, press Ctrl-C to quit...')
+print("Reading MCP3008 value on channel 0, press Ctrl-C to quit...")
 
 try:
     # Main program loop.
