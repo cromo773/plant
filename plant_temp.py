@@ -27,14 +27,14 @@ def measure_th():
     if result.is_valid():
         add_csv_data(data_file,"Temperature:", result.temperature)
     else:
-        logger.error({e.__class__.__name__}, {e}')
+        logger.error({e.__class__.__name__}, {e})
 
 def measure_soil():
     if result.is_valid():
         soil_value = "{:.2f}" %.format(value / 1023 * 100)
         add_csv_data(data_file,value)
     else:
-        logger.error(f'{e.__class__.__name__}: {e}')
+        logger.error({e.__class__.__name__}, {e})
 
 # initialize GPIO
 GPIO.setwarnings(False)
@@ -85,6 +85,6 @@ for x in range(0,100):
         measure_th()
         measure_soil()
     else:
-        logger.error(f'{e.__class__.__name__}: {e})')
+        logger.error({e.__class__.__name__}, {e})
 
 
