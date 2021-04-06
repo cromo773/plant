@@ -1,6 +1,6 @@
 import RPi.GPIO as GPIO
 import dht11
-from time import sleep
+import time
 from time import sleep, strftime, time
 from datetime import datetime
 from pathlib import Path
@@ -10,6 +10,7 @@ dir_path = Path(__file__).parent.resolve()
 data_file = dir_path/'data.csv'
 logfile = dir_path/'loggerdata.log'
 
+time.time()
 
 def create_csv(data_file):
     with open(data_file,'w') as f:
