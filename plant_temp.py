@@ -1,6 +1,6 @@
 import RPi.GPIO as GPIO
 import dht11
-import time
+from time import sleep
 from time import sleep, strftime, time
 from datetime import datetime
 from pathlib import Path
