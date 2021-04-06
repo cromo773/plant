@@ -83,7 +83,7 @@ for x in range(0,100):
     try:
         measure_th()
         measure_soil()
-    else:
+    except:
         logger.error({e.__class__.__name__}, {e})
 
 
