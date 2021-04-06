@@ -10,7 +10,6 @@ dir_path = Path(__file__).parent.resolve()
 data_file = dir_path/'data.csv'
 logfile(dir_path/"loggerdata.log")
 
-x = 0
 
 def create_csv(data_file):
     with open(data_file,'w') as f:
