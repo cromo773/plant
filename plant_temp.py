@@ -30,8 +30,8 @@ def measure_th():
 
 def measure_soil():
     if result.is_valid():
-        soil_value = "{:.2f}" %.format(value / 1023 * 100)
-        add_csv_data(data_file,value)
+        soil_value = format(value / 1023 * 100)
+        add_csv_data(data_file,soil_value)
     else:
         logger.error({e.__class__.__name__}, {e})
 
