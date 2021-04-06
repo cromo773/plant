@@ -73,9 +73,9 @@ try:
         print("The soil moisture reading is currently at {:.2f}%").format(value / 1023 * 100)
         GPIO.output(SWITCH, GPIO.LOW)
         time.sleep(10)
-    except KeyboardInterrupt:
-        GPIO.output(SWITCH, GPIO.LOW)
-        GPIO.cleanup()
+        except KeyboardInterrupt:
+            GPIO.output(SWITCH, GPIO.LOW)
+            GPIO.cleanup()
 
 #soil_humidity = {:.2f}% format(value / 1023 * 100)
 
