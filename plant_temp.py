@@ -8,7 +8,7 @@ import Adafruit_MCP3008
 
 dir_path = Path(__file__).parent.resolve()
 data_file = dir_path/'data.csv'
-logfile(dir_path/"loggerdata.log")
+logfile = dir_path/'loggerdata.log'
 
 
 def create_csv(data_file):
