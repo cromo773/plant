@@ -46,7 +46,7 @@ SWITCH = 20
 GPIO.setup(SWITCH, GPIO.OUT)
 
 # read temp and humidity using pin 14
-instance = dht11.DHT11(pin = 7)
+instance = dht11.DHT11(pin = 4)
 result = instance.read()
 
 #print Temp and Humidity
