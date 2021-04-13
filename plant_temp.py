@@ -26,8 +26,8 @@ def add_csv_data(data_file, data):
 def measure_th():
     if result.is_valid():
         add_csv_data(data_file,"Temperature:", result.temperature)
-    else:
-        logger.error({e.__class__.__name__}, {e})
+ #   else:
+#        logger.error({e.__class__.__name__}, {e})
 
 def measure_soil():
     if result.is_valid():
@@ -86,6 +86,6 @@ for x in range(0,100):
         measure_th()
         measure_soil()
     except:
-        logger.error({e.__class__.__name__}, {e})
+#        logger.error({e.__class__.__name__}, {e})
 
 
