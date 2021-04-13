@@ -69,11 +69,11 @@ while True:
     # Main program loop.
     try:
         GPIO.output(SWITCH, GPIO.HIGH)
-        time.sleep(10)
+        sleep(10)
         value = float(mcp.read_adc(0))
         print("The soil moisture reading is currently at {:.2f}%").format(value / 1023 * 100)
         GPIO.output(SWITCH, GPIO.LOW)
-        time.sleep(10)
+        sleep(10)
     except KeyboardInterrupt:
         GPIO.output(SWITCH, GPIO.LOW)
         GPIO.cleanup()
