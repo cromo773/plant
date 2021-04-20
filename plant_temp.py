@@ -68,8 +68,7 @@ mcp = Adafruit_MCP3008.MCP3008(clk=CLK, cs=CS, miso=MISO, mosi=MOSI)
 
 print("Reading MCP3008 value on channel 0, press Ctrl-C to quit...")
 
-while True:
-    # Main program loop.
+for i in range(0,100):
     try:
         GPIO.output(SWITCH, GPIO.HIGH)
         sleep(1)
@@ -84,7 +83,7 @@ while True:
 
 #soil_humidity = {:.2f}% format(value / 1023 * 100)
 
-for x in range(0,100):
+for i in range(0,100):
     try:
         measure_th()
         measure_soil()
