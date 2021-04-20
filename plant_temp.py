@@ -12,6 +12,9 @@ logfile = dir_path/'loggerdata.log'
 
 time()
 
+#Open a file for reading
+f = open('data.csv')
+
 def create_csv(data_file):
     with open(data_file,'w') as f:
         writer = csv.writer(f)
@@ -89,4 +92,9 @@ for x in range(0,100):
         pass
 #        logger.error({e.__class__.__name__}, {e})
 
+f = open('data.csv')
+f.close()
 
+#check closed status
+print(f.closed)
+#Prints True
