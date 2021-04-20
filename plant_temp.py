@@ -68,22 +68,22 @@ mcp = Adafruit_MCP3008.MCP3008(clk=CLK, cs=CS, miso=MISO, mosi=MOSI)
 
 print("Reading MCP3008 value on channel 0, press Ctrl-C to quit...")
 
-for i in range(0,100):
+for i in range(0,10):
     try:
         GPIO.output(SWITCH, GPIO.HIGH)
-        sleep(1)
+        sleep(10)
         value = float(mcp.read_adc(0))
         value2 = format(value / 1023 * 100)
         print("The soil moisture reading is currently at:",value2)
         GPIO.output(SWITCH, GPIO.LOW)
-        sleep(1)
+        sleep(10)
     except KeyboardInterrupt:
         GPIO.output(SWITCH, GPIO.LOW)
         GPIO.cleanup()
 
 #soil_humidity = {:.2f}% format(value / 1023 * 100)
 
-for i in range(0,100):
+for i in range(0,10):
     try:
         measure_th()
         measure_soil()
