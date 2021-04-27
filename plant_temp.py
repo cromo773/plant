@@ -22,7 +22,7 @@ def create_csv(data_file):
         header = ("Date/time","Temperature","Humidity","Soil humidity")
         writer.writerow(header)
         for row in reader:
-            print row
+            print(row)
 
 def add_csv_data(data_file, data):
     with open (data_file, 'a') as f:
