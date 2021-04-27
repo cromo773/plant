@@ -5,15 +5,16 @@ from time import sleep, strftime, time
 from datetime import datetime
 from pathlib import Path
 import Adafruit_MCP3008
+import csv
 
 dir_path = Path(__file__).parent.resolve()
-data_file = dir_path/'data.csv'
+data_file = dir_path/'data3.csv'
 logfile = dir_path/'loggerdata.log'
 
 time()
 
 #Open a file for reading
-f = open('data.csv')
+f = open('data3.csv')
 
 def create_csv(data_file):
     with open(data_file,'w') as f:
