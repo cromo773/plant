@@ -20,6 +20,8 @@ def create_csv(data_file):
         writer = csv.writer(f)
         header = ("Date/time","Temperature","Humidity","Soil humidity")
         writer.writerow(header)
+        for row in reader:
+            print row
 
 def add_csv_data(data_file, data):
     with open (data_file, 'a') as f:
