@@ -94,7 +94,7 @@ for i in range(0,10):
         pass
 #        logger.error({e.__class__.__name__}, {e})
 
-f = open('data.csv')
+f = open('data3.csv')
 f.close()
 
 #check closed status
