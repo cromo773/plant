@@ -6,6 +6,7 @@ from datetime import datetime
 from pathlib import Path
 import Adafruit_MCP3008
 import csv
+import pandas as pd
 
 dir_path = Path(__file__).parent.resolve()
 data_file = dir_path/'data3.csv'
@@ -100,3 +101,9 @@ f.close()
 #check closed status
 print(f.closed)
 #Prints True
+df = pd.read_csv('data3.csv')
+
+print(df)
+
+
+
